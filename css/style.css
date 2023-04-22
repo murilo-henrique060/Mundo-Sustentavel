@@ -2,6 +2,7 @@
     /* Color Palette */
     --white: #FFFFFF;
     --black: #000000;
+    --dark-gray: #333333;
     --jade: #3AB377;
     --charcoal: #39474E;
     --seasalt: #e4e7e7;
@@ -26,7 +27,8 @@ body  > * {
 /* Topnav Style */
 
 .topnav {
-    height: 70px;
+    position: relative;
+    height: 100px;
 }
 
 .topnav > * {
@@ -38,7 +40,7 @@ body  > * {
 }
 
 .topnav .logo img {
-    height: inherit;
+    height: 80px;
     padding-top: var(--padding-top-bottom);
     padding-bottom: var(--padding-top-bottom);
 }
@@ -58,7 +60,7 @@ body  > * {
     color: var(--black);
     font-family: var(--paragraph);
     text-decoration: none;
-    line-height: 45px;
+    line-height: 70px;
 }
 
 .topnav nav a:hover {
@@ -106,7 +108,7 @@ body  > * {
     position: relative;    
     
     width: auto;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
 
     background-color: var(--seasalt);
 
@@ -149,4 +151,157 @@ body  > * {
 
 .card img {
     width: 100%;
+}
+
+/* Services Style */
+
+.services {
+    position: relative;
+
+    width: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    background-color: var(--seasalt);
+}
+
+.services-label {
+   position: relative;
+
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.services-label * {
+    text-align: center;
+}
+
+.services-label h2 {
+    font-size: 30px;
+    font-family: var(--header);
+    color: var(--black);
+
+    padding-bottom: 10px;
+}
+
+.services-label p {
+    font-size: 16px;
+    font-family: var(--paragraph);
+    color: var(--black);
+}
+
+.services-list {
+    position: relative;
+    display: inline-block;
+
+    width: 100%;
+    height: max-content;
+}
+
+.service-item {
+    position: relative;
+    display: inline;
+
+    float: left;
+
+    width: 22%;
+    margin: 0 1.375%;
+}
+
+.service-icon {
+    position: relative;
+
+    width: 100%;
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+.service-icon img {
+    position: absolute;
+
+    left: 50%;
+    
+    transform: translateX(-50%);
+
+    width: 100px;
+    height: inherit;
+
+    background-color: var(--charcoal);
+}
+
+.service-header {
+    position: relative;
+
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.service-header h3 {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 75%;
+
+    text-align: center;
+    font-size: 20px;
+    font-family: var(--header);
+    color: var(--black);
+}
+
+.service-text {
+    position: relative;
+
+    width: 100%;
+    height: 60px;
+    
+    margin-bottom: 30px;
+}
+.service-text p {
+    position: absolute;
+
+    text-align: center;
+    font-size: 14px;
+    font-family: var(--paragraph);
+    color: var(--dark-gray);
+}
+
+.service-button {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+}
+
+.service-button a {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 100px;
+    height: 30px;
+    padding: 0 10px;
+
+    border-radius: 5px;
+
+    text-align: center;
+    font-size: 14px;
+    font-family: var(--paragraph);
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 30px;
+
+    background-color: var(--charcoal);
+}
+
+.service-button a:hover {
+    background-color: var(--jade);
 }
