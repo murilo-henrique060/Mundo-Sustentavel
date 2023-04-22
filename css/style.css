@@ -100,3 +100,53 @@ body  > * {
     color: var(--white);
 }
 
+/* Cards Style */
+
+.card-list {
+    position: relative;    
+    
+    width: auto;
+    padding-bottom: 40px;
+
+    background-color: var(--seasalt);
+
+    box-sizing: content-box;
+}
+
+.card {
+    position: relative;
+    display: inline-block;
+    
+    width: 30%;
+    margin: 0 1.5%;
+}
+
+.card .card-text {
+    position: absolute;
+    
+    bottom: 100%;
+ 
+    width: 100%;
+    height: max-content;
+    padding: 25px 20px;
+
+    background-color: var(--jade);
+}
+
+.card .card-text h2 {
+    padding-bottom: 10px;
+
+    font-size: 20px;
+    font-family: var(--header);
+    color: var(--white);
+}
+
+.card .card-text p {
+    font-size: 14px;
+    font-family: var(--paragraph);
+    color: var(--white);
+}
+
+.card img {
+    width: 100%;
+}
