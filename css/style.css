@@ -302,3 +302,82 @@ body  > * {
 .service-button a:hover {
     background-color: var(--jade);
 }
+
+/* Recent Articles Style */
+.recent-articles {
+    position: relative;
+
+    width: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    background-color: var(--white);
+}
+
+.recent-articles h2 {
+    position: relative;
+
+    width: 100%;
+    margin-bottom: 30px;
+
+    font-size: 25px;
+    font-family: var(--header);
+    color: var(--black);
+}
+
+.recent-articles-list {
+    position: relative;
+
+    width: 100%;
+    height: max-content;
+}
+
+.article-item {
+    position: relative;
+    display: inline-block;
+
+    width: 31%;
+    margin: 0 1%;
+}
+
+.article-item a {
+    position: relative;
+
+    width: 100%;
+
+    text-decoration: none;
+}
+
+.article-image {
+    position: relative;
+
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.article-image img {
+    width: 100%;
+
+    background-color: #333333;
+}
+
+.article-text {
+    width: 100%;
+    height: max-content;
+    padding: 25px 20px;
+}
+
+.article-text h3 {
+    padding-bottom: 10px;
+
+    font-size: 20px;
+    font-family: var(--header);
+    color: var(--black);
+}
+
+.article-text p {
+    font-size: 14px;
+    font-family: var(--paragraph);
+    color: var(--black);
+}
