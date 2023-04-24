@@ -311,7 +311,7 @@ body > * {
                 background-color: var(--charcoal);
             }
 
-                .service-button a:hover {
+                .service-button:hover {
                     /* ----- Typography ----- */
                     background-color: var(--jade);
                 }
@@ -376,9 +376,6 @@ body > * {
                 .article-image img {
                     /* ----- Box Model ----- */
                     width: 100%;
-                    
-                    /* ----- Visual Decoration ----- */
-                    background-color: #333333;
                 }
 
             .article-text {
