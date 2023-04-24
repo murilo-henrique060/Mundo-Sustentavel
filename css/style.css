@@ -1,3 +1,5 @@
+/* -------------------- Global Variables -------------------- */
+
 :root {
     /* Color Palette */
     --white: #FFFFFF;
@@ -12,6 +14,8 @@
     --paragraph: Arial, Helvetica, sans-serif;
 }
 
+/* -------------------- General -------------------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -19,365 +23,433 @@
     box-sizing: border-box;
 }
 
-body  > * {
+body > * {
     width: auto;
+
     padding: 0 60px;
 }
 
-/* Topnav Style */
+/* -------------------- Topnav -------------------- */
 
 .topnav {
+    /* ----- Variables ----- */
+    --topnav-height: 80px;
+    --padding-tb: 15px;
+
+    /* ----- Box Model ----- */
     position: relative;
-    height: 100px;
+    height: var(--topnav-height); 
 }
 
-.topnav > * {
-    --padding-top-bottom: 15px;
+    .topnav > * {
+        /* ----- Box Model ----- */
+        display: inline;
+        height: inherit;
+    }
 
-    display: inline;
+    .logo {
+        /* ----- Box Model ----- */
+        position: absolute;
+        height: var(--topnav-height);
+        padding: var(--padding-tb) 0;
+        
+        /* ----- Align Verlicaly ----- */
+        top: 45%;
+        transform: translateY(-50%);
+    }
 
-    height: inherit;
-}
+    .nav {
+        /* Align on Right*/
+        float: right;
+    }
 
-.topnav .logo img {
-    height: 80px;
-    padding-top: var(--padding-top-bottom);
-    padding-bottom: var(--padding-top-bottom);
-}
+        .nav-item {
+            /* ----- Box Model ----- */
+            display: inline-block;
+            height: inherit;
+            padding: 0 25px;
+            
+            /* ----- Typography ----- */
+            color: var(--black);
+            font-family: var(--paragraph);
+            font-size: 15px;
+            line-height: var(--topnav-height);
+            font-weight: lighter;
+            text-decoration: none;
+        }
 
-.topnav nav {
-    float: right;
-}
+        .nav-item:hover {
+            /* ----- Typography ----- */
+            color: var(--white);
+            background-color: var(--jade);
+        }
 
-.topnav nav a {
-    display: inline-block;
-
-    height: inherit;
-    padding: 0 25px;
-    padding-top: var(--padding-top-bottom);
-    padding-bottom: var(--padding-top-bottom);
-
-    color: var(--black);
-    font-family: var(--paragraph);
-    text-decoration: none;
-    line-height: 70px;
-}
-
-.topnav nav a:hover {
-    background-color: var(--jade);
-}
-
-/* Hero Style */
+/* --------------------- Hero Image --------------------- */
 
 .hero-image {
+    /* ----- Box Model ----- */
     position: relative;
+    height: 700px;
 
-    height: 600px;
-
+    /* ----- Background ----- */
     background: url("../images/hero.jpg") no-repeat center;
     background-size: cover;
 }
 
-.hero-text {
-    position: absolute;
+    .hero-text {
+        /* ----- Box Model ----- */
+        position: absolute;
+        width: 80%;
 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+        /* ----- Align Horizontally and Verticaly ----- */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
-    width: 70%;
+        /* ----- Typography ----- */
+        text-align: center;
+    }
 
-    text-align: center;
-}
+        .hero-title {
+            /* ----- Typography ----- */
+            color: var(--white);
+            font-family: var(--header);
+            font-size: 60px;
+        }
 
-.hero-text h1 {
-    font-size: 60px;
-    font-family: var(--header);
-    color: var(--white);
-}
+        .hero-label {
+            /* ----- Typography ----- */
+            color: var(--white);
+            font-family: var(--paragraph);
+            font-size: 16px;
+        }
 
-.hero-text p {
-    font-size: 16px;
-    font-family: var(--paragraph);
-    color: var(--white);
-}
-
-/* Cards Style */
+/* -------------------- Card List -------------------- */
 
 .card-list {
-    position: relative;    
-    
+    /* ----- Box Model ----- */
+    position: relative;
     width: auto;
     padding-bottom: 50px;
-
-    background-color: var(--seasalt);
-
     box-sizing: content-box;
+
+    /* Typography */
+    background-color: var(--seasalt);
 }
 
-.card {
-    position: relative;
-    display: inline-block;
-    
-    width: 30%;
-    margin: 0 1.5%;
-}
+    .card {
+        /* ----- Box Model ----- */
+        display: inline-block;
+        position: relative;
+        width: 30%;
+        margin: 0 1.5%;
+    }
 
-.card .card-text {
-    position: absolute;
-    
-    bottom: 100%;
- 
-    width: 100%;
-    height: max-content;
-    padding: 25px 20px;
+        .card-text {
+            /* ----- Box Model ----- */
+            position: absolute;
+            width: 100%;
+            height: max-content;
+            padding: 25px 20px;
+            
+            /* ----- Align to Bottom ----- */
+            bottom: 100%;
 
-    background-color: var(--jade);
-}
+            /* ----- Typography ----- */
+            background-color: var(--jade);
+        }
 
-.card .card-text h2 {
-    padding-bottom: 10px;
+            .card-header {
+                /* ----- Box Model ----- */
+                padding-bottom: 10px;
+                
+                /* ----- Typography ----- */
+                color: var(--white);
+                font-family: var(--header);
+                font-size: 18px;
+            }
 
-    font-size: 20px;
-    font-family: var(--header);
-    color: var(--white);
-}
+            .card-label {
+                /* ----- Typography ----- */
+                color: var(--white);
+                font-family: var(--paragraph);
+                font-size: 13px;
+                font-weight: lighter;
+            }
 
-.card .card-text p {
-    font-size: 14px;
-    font-family: var(--paragraph);
-    color: var(--white);
-}
+        .card-image {
+            /* ----- Box Model ----- */
+            width: 100%;
+        }
 
-.card img {
-    width: 100%;
-}
-
-/* Services Style */
+/* -------------------- Services -------------------- */
 
 .services {
+    /* ----- Box Model ----- */
     position: relative;
-
     width: auto;
     padding-top: 40px;
     padding-bottom: 80px;
 
+    /* ----- Typography ----- */
     background-color: var(--seasalt);
 }
 
-.services-label {
-   position: relative;
+    .services-text {
+        /* ----- Box Model ----- */
+        position: relative;
+        width: 100%;
+        margin-bottom: 60px;
+    }
 
-    width: 100%;
-    margin-bottom: 60px;
-}
+        .services-text * {
+            /* ----- Align Horizontally ----- */
+            text-align: center;
+        }
 
-.services-label * {
-    text-align: center;
-}
+        .services-header {
+            /* ----- Box Model ----- */
+            padding-bottom: 10px;
+            
+            /* ----- Typography ----- */
+            color: var(--black);
+            font-family: var(--header);
+            font-size: 30px;
+        }
 
-.services-label h2 {
-    font-size: 30px;
-    font-family: var(--header);
-    color: var(--black);
+        .services-label {
+            /* ----- Typography ----- */
+            font-size: 16px;
+            font-family: var(--paragraph);
+            color: var(--black);
+        }
 
-    padding-bottom: 10px;
-}
+    .services-list {
+        /* ----- Box Model ----- */
+        display: inline-block;
+        position: relative;
+        width: 100%;
+    }
 
-.services-label p {
-    font-size: 16px;
-    font-family: var(--paragraph);
-    color: var(--black);
-}
+        .service-item {
+            /* ----- Box Model ----- */
+            position: relative;
+            display: inline;
+            width: 22%;
+            margin: 0 1.375%;
 
-.services-list {
-    display: inline-block;
-    position: relative;
+            /* ----- Align to left ----- */
+            float: left;
+        }
 
-    width: 100%;
-    height: max-content;
-}
+            .service-icon {
+                /* ----- Box Model ----- */
+                position: relative;
+                width: 100%;
+                height: 150px;
+                margin-bottom: 30px;
+            }
 
-.service-item {
-    position: relative;
-    display: inline;
+                .service-icon-image {
+                    /* ----- Box Model ----- */
+                    position: absolute;
+                    height: inherit;
 
-    float: left;
+                    /* ----- Align Horizontally ----- */
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
 
-    width: 22%;
-    margin: 0 1.375%;
-}
+            .service-header {
+                /* ----- Box Model ----- */
+                position: relative;
+                width: 100%;
+                margin-bottom: 10px;
 
-.service-icon {
-    position: relative;
+                /* ----- Typography ----- */
+                color: var(--black);
+                font-family: var(--header);
+                font-size: 20px;
+                text-align: center;
+            }
 
-    width: 100%;
-    height: 150px;
-    margin-bottom: 30px;
-}
+            .service-label {
+                /* ----- Box Model ----- */
+                position: relative;
+                width: 100%;
+                margin-bottom: 30px;
 
-.service-icon img {
-    position: absolute;
+                /* ----- Typography ----- */
+                color: var(--dark-gray);
+                font-family: var(--paragraph);
+                font-size: 14px;
+                text-align: center;
+            }
 
-    left: 50%;
-    
-    transform: translateX(-50%);
+            .service-button {
+                /* ----- Box Model ----- */
+                position: absolute;
+                width: 100px;
+                height: 30px;
+                padding: 0 10px;
 
-    height: inherit;
-}
+                /* ----- Align Horizontally ----- */
+                left: 50%;
+                transform: translateX(-50%);
 
-.service-header {
-    position: relative;
+                /* ----- Visual Decoration ----- */
+                border-radius: 5px;
 
-    width: 100%;
-    height: 50px;
-    margin-bottom: 15px;
-}
+                /* ----- Typography ----- */
+                color: var(--white);
+                font-family: var(--paragraph);
+                font-size: 14px;
+                text-align: center;
+                font-weight: bold;
+                line-height: 30px;
+                text-decoration: none;
+                background-color: var(--charcoal);
+            }
 
-.service-header h3 {
-    position: absolute;
+        .service-button a:hover {
+            /* ----- Typography ----- */
+            background-color: var(--jade);
+        }
 
-    top: 50%;
-    left: 50%;
+/* -------------------- Recent Articles -------------------- */
 
-    transform: translate(-50%, -50%);
-
-    width: 75%;
-
-    text-align: center;
-    font-size: 20px;
-    font-family: var(--header);
-    color: var(--black);
-}
-
-.service-text {
-    position: relative;
-
-    width: 100%;
-    height: 60px;
-    
-    margin-bottom: 30px;
-}
-.service-text p {
-    position: absolute;
-
-    text-align: center;
-    font-size: 14px;
-    font-family: var(--paragraph);
-    color: var(--dark-gray);
-}
-
-.service-button {
-    position: relative;
-
-    width: 100%;
-    height: auto;
-}
-
-.service-button a {
-    position: absolute;
-
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    width: 100px;
-    height: 30px;
-    padding: 0 10px;
-
-    border-radius: 5px;
-
-    text-align: center;
-    font-size: 14px;
-    font-family: var(--paragraph);
-    color: var(--white);
-    text-decoration: none;
-    font-weight: bold;
-    line-height: 30px;
-
-    background-color: var(--charcoal);
-}
-
-.service-button a:hover {
-    background-color: var(--jade);
-}
-
-/* Recent Articles Style */
 .recent-articles {
+    /* ----- Box Model ----- */
     position: relative;
-
     width: auto;
     padding-top: 40px;
     padding-bottom: 40px;
 
+    /* ----- Typography ----- */
     background-color: var(--white);
 }
 
-.recent-articles h2 {
+    .recent-articles-header {
+        /* ----- Box Model ----- */
+        position: relative;
+        width: 100%;
+        margin-bottom: 30px;
+
+        /* ----- Typography ----- */
+        color: var(--black);
+        font-family: var(--header);
+        font-size: 25px;
+    }
+
+    .recent-articles-list {
+        /* ----- Box Model ----- */
+        position: relative;
+        width: 100%;
+        height: max-content;
+    }
+
+        .article {
+            /* ----- Box Model ----- */
+            position: relative;
+            display: inline-block;
+            width: 31%;
+            margin: 0 1%;
+        }
+        
+            .article-link {
+                /* ----- Box Model ----- */
+                position: relative;
+                width: 100%;
+
+                /* ----- Visual Decoration ----- */
+                text-decoration: none;
+            }
+
+            .article-image {
+                /* ----- Box Model ----- */
+                position: relative;
+                width: 100%;
+                height: 200px;
+                margin-bottom: 20px;
+            }
+
+                .article-image img {
+                    /* ----- Box Model ----- */
+                    width: 100%;
+                    
+                    /* ----- Visual Decoration ----- */
+                    background-color: #333333;
+                }
+
+        .article-text {
+            /* ----- Box Model ----- */
+            width: 100%;
+            height: max-content;
+            padding: 25px 20px;
+        }
+
+            .article-header {
+                /* ----- Box Model ----- */
+                padding-bottom: 10px;
+
+                /* ----- Typography ----- */
+                color: var(--black);
+                font-family: var(--header);
+                font-size: 20px;
+            }
+
+            .article-label {
+                /* ----- Typography ----- */
+                color: var(--black);
+                font-family: var(--paragraph);
+                font-size: 14px;
+            }
+
+/* -------------------- Footer -------------------- */
+
+.footer {
+    /* ----- Box Model ----- */
     position: relative;
+    width: auto;
+    height: fit-content;
+    padding: 20px;
 
-    width: 100%;
-    margin-bottom: 30px;
-
-    font-size: 25px;
-    font-family: var(--header);
-    color: var(--black);
+    /* ----- Typography ----- */
+    background-color: var(--charcoal);
+    box-sizing: content-box;
 }
 
-.recent-articles-list {
-    position: relative;
+    .footer-item {
+        /* ----- Box Model ----- */
+        position: relative;
+        display: inline-block;
+        width: 33%;
+        height: 80px;
+    }
 
-    width: 100%;
-    height: max-content;
-}
+        .footer-content {
+            /* ----- Box Model ----- */
+            position: absolute;
+            
+            /* ----- Align Horizontally ----- */
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-.article-item {
-    position: relative;
-    display: inline-block;
+            .footer-header {
+                /* ----- Box Model ----- */
+                margin-bottom: 10px;
 
-    width: 31%;
-    margin: 0 1%;
-}
+                /* ----- Typography ----- */
+                color: var(--white);
+                font-family: var(--header);
+                font-size: 20px;
+            }
 
-.article-item a {
-    position: relative;
-
-    width: 100%;
-
-    text-decoration: none;
-}
-
-.article-image {
-    position: relative;
-
-    width: 100%;
-    height: 200px;
-    margin-bottom: 20px;
-}
-
-.article-image img {
-    width: 100%;
-
-    background-color: #333333;
-}
-
-.article-text {
-    width: 100%;
-    height: max-content;
-    padding: 25px 20px;
-}
-
-.article-text h3 {
-    padding-bottom: 10px;
-
-    font-size: 20px;
-    font-family: var(--header);
-    color: var(--black);
-}
-
-.article-text p {
-    font-size: 14px;
-    font-family: var(--paragraph);
-    color: var(--black);
-}
+            .footer-label {
+                /* ----- Typography ----- */
+                color: var(--white);
+                font-family: var(--paragraph);
+                font-size: 11px;
+                font-weight: lighter;
+            }
