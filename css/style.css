@@ -311,10 +311,10 @@ body > * {
                 background-color: var(--charcoal);
             }
 
-        .service-button a:hover {
-            /* ----- Typography ----- */
-            background-color: var(--jade);
-        }
+                .service-button a:hover {
+                    /* ----- Typography ----- */
+                    background-color: var(--jade);
+                }
 
 /* -------------------- Recent Articles -------------------- */
 
@@ -381,29 +381,29 @@ body > * {
                     background-color: #333333;
                 }
 
-        .article-text {
-            /* ----- Box Model ----- */
-            width: 100%;
-            height: max-content;
-            padding: 25px 20px;
-        }
-
-            .article-header {
+            .article-text {
                 /* ----- Box Model ----- */
-                padding-bottom: 10px;
-
-                /* ----- Typography ----- */
-                color: var(--black);
-                font-family: var(--header);
-                font-size: 20px;
+                width: 100%;
+                height: max-content;
+                padding: 25px 20px;
             }
 
-            .article-label {
-                /* ----- Typography ----- */
-                color: var(--black);
-                font-family: var(--paragraph);
-                font-size: 14px;
-            }
+                .article-header {
+                    /* ----- Box Model ----- */
+                    padding-bottom: 10px;
+
+                    /* ----- Typography ----- */
+                    color: var(--black);
+                    font-family: var(--header);
+                    font-size: 20px;
+                }
+
+                .article-label {
+                    /* ----- Typography ----- */
+                    color: var(--black);
+                    font-family: var(--paragraph);
+                    font-size: 14px;
+                }
 
 /* -------------------- Footer -------------------- */
 
