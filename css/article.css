@@ -1,0 +1,40 @@
+.hero-image {
+    /* ----- Box Model ----- */
+    position: relative;
+    min-height: 500px;
+
+
+    /* ----- Background ----- */
+    background-color: var(--jade);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+    .hero-text {
+        /* ----- Box Model ----- */
+        position: absolute;
+        width: 70%;
+
+        /* ----- Align Horizontally and Verticaly ----- */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        /* ----- Typography ----- */
+        text-align: center;
+    }
+
+        .hero-title {
+            /* ----- Typography ----- */
+            color: var(--white);
+            font-family: var(--header);
+            font-size: 40px;
+        }
+
+        .hero-label {
+            /* ----- Typography ----- */
+            color: var(--white);
+            font-family: var(--paragraph);
+            font-size: 10px;
+        }

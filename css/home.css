@@ -1,0 +1,249 @@
+/* --------------------- Hero Image --------------------- */
+
+.hero-image {
+    /* ----- Box Model ----- */
+    position: relative;
+    min-height: 700px;
+
+
+    /* ----- Background ----- */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+    .hero-text {
+        /* ----- Box Model ----- */
+        position: absolute;
+        width: 70%;
+
+        /* ----- Align Horizontally and Verticaly ----- */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        /* ----- Typography ----- */
+        text-align: center;
+    }
+
+        .hero-title {
+            /* ----- Typography ----- */
+            color: var(--white);
+            font-family: var(--header);
+            font-size: 40px;
+        }
+
+        .hero-label {
+            /* ----- Typography ----- */
+            color: var(--white);
+            font-family: var(--paragraph);
+            font-size: 10px;
+        }
+
+/* -------------------- Card List -------------------- */
+
+.card-list {
+    /* ----- Variablea ----- */
+    --card-height: 21rem;
+    --card-width: 31%;
+    --card-count: 3;
+
+    /* ----- Box Model ----- */
+    position: relative;
+    width: auto;
+    height: calc(var(--card-height) / 2);
+    padding-bottom: 50px;
+    box-sizing: content-box;
+
+    /* Typography */
+    background-color: var(--seasalt);
+}
+
+    .card {
+        /* ----- Box Model ----- */
+        display: inline;
+        position: relative;
+        width: var(--card-width);
+        height: inherit;
+        margin: 0 calc((100% - var(--card-count) * var(--card-width)) / (var(--card-count) * 2));
+
+        float: left;
+    }
+    
+    
+    .card-text {
+            /* ----- Box Model ----- */
+            position: absolute;
+            width: 100%;
+            height: inherit;
+            padding: 25px 20px;
+            
+            /* ----- Align to Bottom ----- */
+            bottom: 100%;
+
+            /* ----- Typography ----- */
+            background-color: var(--jade);
+        }
+        
+        .card-header {
+            /* ----- Box Model ----- */
+            padding-bottom: 10px;
+            
+            /* ----- Typography ----- */
+            color: var(--white);
+            font-family: var(--header);
+            font-size: 16px;
+        }
+        
+        .card-label {
+            /* ----- Box Model ----- */
+            display: block;
+            height: 100%;
+
+            /* ----- Typography ----- */
+            color: var(--white);
+            font-family: var(--paragraph);
+            font-size: 13px;
+            text-align: center;
+            font-weight: lighter;
+        }
+
+    .card-image {
+        /* ----- Box Model ----- */
+        width: 100%;
+        height: calc(var(--card-height) / 2);
+    }
+
+/* -------------------- Services -------------------- */
+
+.services {
+    /* ----- Box Model ----- */
+    position: relative;
+    width: auto;
+    padding-top: 20px;
+    padding-bottom: 80px;
+
+    /* ----- Typography ----- */
+    background-color: var(--seasalt);
+}
+
+    .services-text {
+        /* ----- Box Model ----- */
+        position: relative;
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+        .services-text * {
+            /* ----- Align Horizontally ----- */
+            text-align: center;
+        }
+
+        .services-header {
+            /* ----- Box Model ----- */
+            padding-bottom: 10px;
+            
+            /* ----- Typography ----- */
+            color: var(--black);
+            font-family: var(--header);
+            font-size: 30px;
+        }
+
+        .services-label {
+            /* ----- Typography ----- */
+            font-size: 16px;
+            font-family: var(--paragraph);
+            color: var(--black);
+        }
+
+    .services-list {
+        /* ----- Box Model ----- */
+        display: inline-block;
+        position: relative;
+        width: 100%;
+    }
+
+        .service-item {
+            /* ----- Box Model ----- */
+            position: relative;
+            display: inline;
+            width: 22%;
+            margin: 0 1.375%;
+
+            /* ----- Align to left ----- */
+            float: left;
+        }
+
+            .service-icon {
+                /* ----- Box Model ----- */
+                position: relative;
+                width: 100%;
+                height: 150px;
+                margin-bottom: 30px;
+            }
+
+                .service-icon-image {
+                    /* ----- Box Model ----- */
+                    position: absolute;
+                    height: inherit;
+
+                    /* ----- Align Horizontally ----- */
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+            .service-header {
+                /* ----- Box Model ----- */
+                position: relative;
+                width: 100%;
+                margin-bottom: 10px;
+
+                /* ----- Typography ----- */
+                color: var(--black);
+                font-family: var(--header);
+                font-size: 20px;
+                text-align: center;
+            }
+
+            .service-label {
+                /* ----- Box Model ----- */
+                position: relative;
+                width: 100%;
+                margin-bottom: 30px;
+
+                /* ----- Typography ----- */
+                color: var(--dark-gray);
+                font-family: var(--paragraph);
+                font-size: 14px;
+                text-align: center;
+            }
+
+            .service-button {
+                /* ----- Box Model ----- */
+                position: absolute;
+                width: 100px;
+                height: 30px;
+                padding: 0 10px;
+
+                /* ----- Align Horizontally ----- */
+                left: 50%;
+                transform: translateX(-50%);
+
+                /* ----- Visual Decoration ----- */
+                border-radius: 5px;
+
+                /* ----- Typography ----- */
+                color: var(--white);
+                font-family: var(--paragraph);
+                font-size: 14px;
+                text-align: center;
+                font-weight: bold;
+                line-height: 30px;
+                text-decoration: none;
+                background-color: var(--charcoal);
+            }
+
+                .service-button:hover {
+                    /* ----- Typography ----- */
+                    background-color: var(--jade);
+                }

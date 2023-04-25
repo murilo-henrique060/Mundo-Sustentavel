@@ -1,0 +1,184 @@
+/* -------------------- Global Variables -------------------- */
+
+:root {
+    /* Color Palette */
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark-gray: #333333;
+    --jade: #3AB377;
+    --charcoal: #39474E;
+    --seasalt: #e4e7e7;
+
+    /* Font Families */
+    --header: Helvetica, Arial, sans-serif;
+    --paragraph: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* -------------------- General -------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body > * {
+    width: 100%;
+
+    padding: 0 8%;
+}
+
+/* -------------------- Topnav -------------------- */
+
+.topnav {
+    /* ----- Variables ----- */
+    --topnav-height: 80px;
+    --padding-tb: 15px;
+
+    /* ----- Box Model ----- */
+    position: relative;
+    min-height: var(--topnav-height); 
+}
+
+    .topnav > * {
+        /* ----- Box Model ----- */
+        display: inline;
+        height: inherit;
+    }
+
+    .logo {
+        /* ----- Box Model ----- */
+        position: absolute;
+        height: var(--topnav-height);
+        padding: var(--padding-tb) 0;
+        
+        /* ----- Align Verlicaly ----- */
+        top: 45%;
+        transform: translateY(-50%);
+    }
+
+    .nav {
+        /* Align on Right*/
+        float: right;
+    }
+
+        .nav-item {
+            /* ----- Box Model ----- */
+            display: inline-block;
+            height: inherit;
+            padding: 0 1em;
+            
+            /* ----- Typography ----- */
+            color: var(--black);
+            font-family: var(--paragraph);
+            font-size: 14px;
+            line-height: var(--topnav-height);
+            font-weight: lighter;
+            text-decoration: none;
+        }
+
+            .nav-item:hover {
+                /* ----- Typography ----- */
+                color: var(--white);
+                background-color: var(--jade);
+            }
+
+            .recent-articles {
+                /* ----- Box Model ----- */
+                position: relative;
+                width: auto;
+                padding-top: 40px;
+                padding-bottom: 40px;
+            
+                /* ----- Typography ----- */
+                background-color: var(--white);
+            }
+            
+                .recent-articles-header {
+                    /* ----- Box Model ----- */
+                    position: relative;
+                    width: 100%;
+                    margin-bottom: 30px;
+            
+                    /* ----- Typography ----- */
+                    color: var(--black);
+                    font-family: var(--header);
+                    font-size: 25px;
+                }
+            
+                .recent-articles-list {
+                    /* ----- Box Model ----- */
+                    position: relative;
+                    width: 100%;
+                    height: max-content;
+                }
+            
+                    .article {
+                        /* ----- Box Model ----- */
+                        position: relative;
+                        display: inline-block;
+                        width: 31%;
+                        margin: 0 1%;
+                    }
+                    
+                        .article-link {
+                            /* ----- Box Model ----- */
+                            position: relative;
+                            width: 100%;
+            
+                            /* ----- Visual Decoration ----- */
+                            text-decoration: none;
+                        }
+            
+                        .article-image {
+                            /* ----- Box Model ----- */
+                            position: relative;
+                            width: 100%;
+                            height: 200px;
+                            margin-bottom: 20px;
+                        }
+            
+                            .article-image img {
+                                /* ----- Box Model ----- */
+                                width: 100%;
+                            }
+            
+                        .article-text {
+                            /* ----- Box Model ----- */
+                            width: 100%;
+                            height: max-content;
+                            padding: 25px 20px;
+                        }
+            
+                            .article-header {
+                                /* ----- Box Model ----- */
+                                padding-bottom: 10px;
+            
+                                /* ----- Typography ----- */
+                                color: var(--black);
+                                font-family: var(--header);
+                                font-size: 20px;
+                            }
+            
+                            .article-label {
+                                /* ----- Typography ----- */
+                                color: var(--black);
+                                font-family: var(--paragraph);
+                                font-size: 14px;
+                            }
+
+/* -------------------- Footer -------------------- */
+
+footer {
+    /* ----- Box Model ----- */
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    /* ----- Typography ----- */
+    color: var(--seasalt);
+    font-family: var(--paragraph);
+    font-size: 10px;
+    text-align: center;
+    background-color: var(--charcoal);
+}
