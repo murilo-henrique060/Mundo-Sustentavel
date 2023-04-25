@@ -221,7 +221,7 @@
             .service-button {
                 /* ----- Box Model ----- */
                 position: absolute;
-                width: 100px;
+                width: 120px;
                 height: 30px;
                 padding: 0 10px;
 
