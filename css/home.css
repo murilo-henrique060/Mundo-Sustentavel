@@ -15,7 +15,7 @@
     .hero-text {
         /* ----- Box Model ----- */
         position: absolute;
-        width: 70%;
+        width: 100%;
 
         /* ----- Align Horizontally and Verticaly ----- */
         top: 45%;
@@ -30,15 +30,15 @@
             /* ----- Typography ----- */
             color: var(--white);
             font-family: var(--header);
-            font-size: 40px;
+            font-size: 2.5em;
             word-wrap: break-word;
         }
 
         .hero-label {
             /* ----- Typography ----- */
-            color: var(--white);
+            color: var(--light-gray);
             font-family: var(--paragraph);
-            font-size: 10px;
+            font-size: 0.8em;
             word-wrap: break-word;
         }
 
@@ -78,7 +78,7 @@
             position: absolute;
             width: 100%;
             height: inherit;
-            padding: 25px 20px;
+            padding: 25px 20px 20px;
             
             /* ----- Align to Bottom ----- */
             bottom: 100%;
@@ -148,12 +148,12 @@
             /* ----- Typography ----- */
             color: var(--black);
             font-family: var(--header);
-            font-size: 30px;
+            font-size: 2em;
         }
 
         .services-label {
             /* ----- Typography ----- */
-            font-size: 16px;
+            font-size: 1em;
             font-family: var(--paragraph);
             color: var(--black);
         }
@@ -211,12 +211,12 @@
                 /* ----- Box Model ----- */
                 position: relative;
                 width: 100%;
-                margin-bottom: 30px;
+                margin-bottom: 1em;
 
                 /* ----- Typography ----- */
                 color: var(--dark-gray);
                 font-family: var(--paragraph);
-                font-size: 14px;
+                font-size: 0.8em;
                 text-align: center;
             }
 

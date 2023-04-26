@@ -4,13 +4,14 @@
     /* Color Palette */
     --white: #FFFFFF;
     --black: #000000;
+    --light-gray: #F5F5F5;
     --dark-gray: #333333;
     --jade: #3AB377;
     --charcoal: #39474E;
     --seasalt: #e4e7e7;
 
     /* Font Families */
-    --header: Helvetica, Arial, sans-serif;
+    --header: Tahoma, Geneva, Verdana, sans-serif;
     --paragraph: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -24,9 +25,25 @@
 }
 
 body > * {
+    /* ----- Box Model ----- */
     width: 100%;
-
     padding: 0 8%;
+
+    /* ----- Typography ----- */
+    font-family: var(--paragraph);
+    font-weight: lighter;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /* ----- Typography ----- */
+    font-family: var(--header);
+    font-weight: bold;
+}
+
+p {
+    /* ----- Typography ----- */
+    font-family: var(--paragraph);
+    font-weight: lighter;
 }
 
 /* -------------------- Topnav -------------------- */
@@ -84,89 +101,89 @@ body > * {
                 background-color: var(--jade);
             }
 
-            .recent-articles {
+/* -------------------- Recent Articles -------------------- */
+
+.recent-articles {
+    /* ----- Box Model ----- */
+    position: relative;
+    width: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    /* ----- Typography ----- */
+    background-color: var(--white);
+}
+
+    .recent-articles-header {
+        /* ----- Box Model ----- */
+        position: relative;
+        width: 100%;
+        margin-bottom: 30px;
+
+        /* ----- Typography ----- */
+        color: var(--black);
+        font-size: 25px;
+    }
+
+    .recent-articles-list {
+        /* ----- Box Model ----- */
+        position: relative;
+        width: 100%;
+        height: max-content;
+    }
+
+        .article {
+            /* ----- Box Model ----- */
+            position: relative;
+            display: inline-block;
+            width: 32.8%;
+        }
+        
+            .article-link {
                 /* ----- Box Model ----- */
                 position: relative;
-                width: auto;
-                padding-top: 40px;
-                padding-bottom: 40px;
-            
-                /* ----- Typography ----- */
-                background-color: var(--white);
+                width: 100%;
+
+                /* ----- Visual Decoration ----- */
+                text-decoration: none;
             }
-            
-                .recent-articles-header {
+
+            .article-image {
+                /* ----- Box Model ----- */
+                position: relative;
+                width: 100%;
+                height: 200px;
+                margin-bottom: 20px;
+            }
+
+                .article-image img {
                     /* ----- Box Model ----- */
-                    position: relative;
                     width: 100%;
-                    margin-bottom: 30px;
-            
+                }
+
+            .article-text {
+                /* ----- Box Model ----- */
+                width: 100%;
+                height: max-content;
+                padding: 25px 20px;
+            }
+
+                .article-header {
+                    /* ----- Box Model ----- */
+                    padding-bottom: 10px;
+
                     /* ----- Typography ----- */
                     color: var(--black);
                     font-family: var(--header);
-                    font-size: 25px;
+                    font-size: 20px;
                 }
-            
-                .recent-articles-list {
-                    /* ----- Box Model ----- */
-                    position: relative;
-                    width: 100%;
-                    height: max-content;
+
+                .article-label {
+                    /* ----- Typography ----- */
+                    color: var(--black);
+                    font-family: var(--paragraph);
+                    font-size: 14px;
                 }
-            
-                    .article {
-                        /* ----- Box Model ----- */
-                        position: relative;
-                        display: inline-block;
-                        width: 31%;
-                        margin: 0 1%;
-                    }
-                    
-                        .article-link {
-                            /* ----- Box Model ----- */
-                            position: relative;
-                            width: 100%;
-            
-                            /* ----- Visual Decoration ----- */
-                            text-decoration: none;
-                        }
-            
-                        .article-image {
-                            /* ----- Box Model ----- */
-                            position: relative;
-                            width: 100%;
-                            height: 200px;
-                            margin-bottom: 20px;
-                        }
-            
-                            .article-image img {
-                                /* ----- Box Model ----- */
-                                width: 100%;
-                            }
-            
-                        .article-text {
-                            /* ----- Box Model ----- */
-                            width: 100%;
-                            height: max-content;
-                            padding: 25px 20px;
-                        }
-            
-                            .article-header {
-                                /* ----- Box Model ----- */
-                                padding-bottom: 10px;
-            
-                                /* ----- Typography ----- */
-                                color: var(--black);
-                                font-family: var(--header);
-                                font-size: 20px;
-                            }
-            
-                            .article-label {
-                                /* ----- Typography ----- */
-                                color: var(--black);
-                                font-family: var(--paragraph);
-                                font-size: 14px;
-                            }
 
 /* -------------------- Footer -------------------- */
 
