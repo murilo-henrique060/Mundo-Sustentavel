@@ -29,15 +29,10 @@
             /* ----- Typography ----- */
             color: var(--white);
             font-family: var(--header);
-            font-size: 40px;
+            font-size: 60px;
+            text-shadow: 0 0 8px var(--black);
         }
-
-        .hero-label {
-            /* ----- Typography ----- */
-            color: var(--white);
-            font-family: var(--paragraph);
-            font-size: 10px;
-        }
+        
 
 .article-content {
     /* ----- Box Model ----- */
@@ -50,7 +45,13 @@
     }
     .article-content h2 {
         /* ----- Typography ----- */
-        font-size: 24px;
+        font-size: 20px;
+        line-height: 1.5em;
+    }
+
+    .article-content h3 {
+        /* ----- Typography ----- */
+        font-size: 17px;
         line-height: 1.5em;
     }
 
@@ -58,4 +59,21 @@
         /* ----- Typography ----- */
         font-size: 14px;
         line-height: 1.5em;
+    }
+
+    .article-content li {
+        /* ----- Box Model ----- */
+        margin-left: 20px;
+
+        /* ----- Typography ----- */
+        font-size: 14px;
+        line-height: 1.5em;
+        list-style-position: inside;
+    }
+
+    .article-content img {
+        /* ----- Box Model ----- */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }

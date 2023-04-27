@@ -3,9 +3,10 @@
 :root {
     /* Color Palette */
     --white: #FFFFFF;
-    --black: #000000;
+    --black: #080808;
     --light-gray: #F5F5F5;
-    --dark-gray: #333333;
+    --dark-gray: #4e4e4e;
+    --darker-gray: #181818;
     --jade: #3AB377;
     --charcoal: #39474E;
     --seasalt: #e4e7e7;
@@ -118,25 +119,29 @@ p {
         /* ----- Box Model ----- */
         position: relative;
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 0px;
 
         /* ----- Typography ----- */
         color: var(--black);
         font-size: 25px;
     }
 
-    .recent-articles-list {
+    .article-list {
         /* ----- Box Model ----- */
         position: relative;
         width: 100%;
-        height: max-content;
+        height: auto;
     }
 
         .article {
             /* ----- Box Model ----- */
             position: relative;
-            display: inline-block;
-            width: 32.8%;
+            display: block;
+            height: inherit;
+            width: 20%;
+            margin: 2.5%;
+
+            float: left;
         }
         
             .article-link {
@@ -150,44 +155,44 @@ p {
 
             .article-image {
                 /* ----- Box Model ----- */
-                position: relative;
                 width: 100%;
-                height: 200px;
-                margin-bottom: 20px;
             }
 
                 .article-image img {
                     /* ----- Box Model ----- */
                     width: 100%;
+                    object-fit: cover;
                 }
 
             .article-text {
                 /* ----- Box Model ----- */
                 width: 100%;
                 height: max-content;
-                padding: 25px 20px;
+                padding: 15px 10px;
             }
 
                 .article-header {
                     /* ----- Box Model ----- */
-                    padding-bottom: 10px;
+                    padding-bottom: 8px;
 
                     /* ----- Typography ----- */
-                    color: var(--black);
+                    color: var(--darker-gray);
                     font-family: var(--header);
-                    font-size: 20px;
+                    font-size: 15px;
                 }
 
                 .article-label {
                     /* ----- Typography ----- */
-                    color: var(--black);
+                    color: var(--dark-gray);
                     font-family: var(--paragraph);
-                    font-size: 14px;
+                    font-size: 12px;
                 }
 
 /* -------------------- Footer -------------------- */
 
 footer {
+    display: inline-block;
+
     /* ----- Box Model ----- */
     padding-top: 20px;
     padding-bottom: 20px;
